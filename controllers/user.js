@@ -1,6 +1,6 @@
 const BlogUrl = require("../models/blogUrl");
 const WorkFlowUrl = require("../models/workFlowUrl");
-const DocumenationUrl = require("../models/documenationUrl");
+const {DocumentUrl} = require("../models/documenationUrl");
 const User = require("../models/user");
 const { sendResponse } = require("../utils/response");
 
@@ -12,7 +12,7 @@ module.exports.userInfo = async (req, res) => {
       return sendResponse(400, { message: "user doesn't exist" }, res);
     }
     const [documentationURls,blogUrls,workFlowUrls] = await Promise.all([
-        DocumenationUrl.find({user:user._id}),
+        DocumentUrl.find({user:user._id}),
         BlogUrl.find({user:user._id}),
         WorkFlowUrl.find({user:user._id})
 

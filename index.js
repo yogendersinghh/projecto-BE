@@ -23,6 +23,7 @@ mongoose
     console.log("error in connection of mongodb");
   });
 
+console.log("this is running");
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(cors())
