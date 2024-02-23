@@ -29,7 +29,7 @@ app.use(express.json());
 app.use(cors())
 app.use(
     authenticate.unless({
-      path: ["/auth/login", "/auth/signup"],
+      path: ["/auth/login", "/auth/signup","/user/beta-mail"],
     })
   );
   
