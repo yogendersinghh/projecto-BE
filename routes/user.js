@@ -4,7 +4,7 @@ const router = express.Router()
 
 
 router.get("/getInfo",userInfo)
-router.get("/beta-mail",betaMail)
+router.post("/beta-mail",betaMail)
 
 
 
